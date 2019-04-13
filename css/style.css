@@ -1,0 +1,29 @@
+html {
+  background-color: lightgray;
+}
+
+table {
+  width: 50px;
+  height: 90px;
+  font-size: 14px;
+  color: pink;
+  background-color: black;
+  text-align: center;
+}
+
+.task1 {
+  width: 100px;
+  height: 100px;
+  font-size: 12px;
+  color: white;
+  background-color: black;
+  text-align: right;
+}
+.task2 {
+  width: 200px;
+  height: 200px;
+  font-size: 15px;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
