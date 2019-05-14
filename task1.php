@@ -37,7 +37,7 @@ echo test1(1);
 $a= "Hello World";
 
 function test2($a){
-echo $a;
+return $a;
 }
 echo test2($a);
  ?>
@@ -45,7 +45,7 @@ echo test2($a);
  <?php
 
 function test3($a){
-  echo $a . "!!";
+  return $a . "!!";
 }
 $a= "Hello World";
 echo test3($a);
@@ -64,13 +64,16 @@ echo test4($a,$b);
 
  <?php
 function test5($a){
-if ($a = 1 or 3){
-  echo "奇数";
+if ($a == 1 or $a == 3){
+  echo "奇数\n";
 }
-elseif ($a = 2 or 4){
-  echo "偶数";
+elseif ($a == 2 or $a== 4){
+  echo "偶数\n";
 }
 }
+echo test5(1);
+echo test5(2);
+echo test5(3);
 echo test5(4);
   ?>
   <br>
@@ -78,10 +81,34 @@ echo test5(4);
 $arr = [1,2,3,4,5,6];
 // ７が分かりませんでした。
 function test6($arr){
- for ($a = 0; $a <= 6; $a++){
-echo $arr[$a];
-}}
-echo test6(0);
+ //パターン1
+ for ($a = 0; $a <= 5; $a++){
+   echo $arr[$a];
+ }
+ echo "\n";
+
+ //パターン2
+ foreach($arr as $num){
+   echo $num;
+ }
+ echo "\n";
+
+ //パターン3
+ $str = "";
+ foreach($arr as $num){
+   $str = $str.$num;
+ }
+ echo $str."\n";
+
+ //パターン4
+ $str = "";
+ foreach($arr as $num){
+   $str .= $num;
+ }
+ echo $str."\n";
+
+}
+echo test6($arr);
 ?>
 
 <br>
